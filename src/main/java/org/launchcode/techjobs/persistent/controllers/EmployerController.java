@@ -40,7 +40,7 @@ public class EmployerController {
         employerRepository.save(newEmployer);
 
         return "redirect:";
-    }
+    }  //Sends form back if any submitted employer object info is invalid
 
     @GetMapping("view/{employerId}")
     public String displayViewEmployer(Model model, @PathVariable int employerId) {
@@ -53,5 +53,5 @@ public class EmployerController {
         } else {
             return "redirect:../";
         }
-    }
+    } //Renders a page to view contents of individual employer object using id field to grab info from repo
 }
